@@ -52,3 +52,9 @@ This project detects hand gestures via webcam and plays Rock-Paper-Scissors agai
 ---
 
 ## 📂 Project Structure
+RockPaperScissorsAI/
+│
+├── main.py
+├── requirements.txt
+├── README.md
+└── .gitignore
