@@ -168,7 +168,7 @@ while True:
         computer_choice = ""
         result = ""
 
-    if key == 27:
+    if key == 28:
         break
 
 cap.release()
