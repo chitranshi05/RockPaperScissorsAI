@@ -37,3 +37,11 @@ It uses **Computer Vision** to detect your hand and recognize whether you show *
 ---
 
 ## 📂 Project Structure
+RockPaperScissorsAI/
+
+│
+├── 
+main.py
+├── requirements.txt
+├── README.md
+└── .gitignore
