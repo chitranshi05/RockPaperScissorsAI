@@ -1,19 +1,18 @@
-# 🎮 Rock Paper Scissors AI
+# 🎮 Rock Paper Scissors AR
 
-This project is a simple Rock Paper Scissors game that uses your **hand gestures** through a webcam to play against the computer.
+A real-time Rock Paper Scissors game that uses **hand gesture recognition** through your webcam to play against the computer.
 
-It uses **Computer Vision** to detect your hand and recognize whether you show **Rock, Paper, or Scissors**.
+Built with **OpenCV** and **MediaPipe** for hand tracking and gesture detection.
 
 ---
 
 ## 🚀 Features
 
-- Detects hand gestures using webcam
-- Plays Rock Paper Scissors against the computer
+- Real-time hand gesture detection via webcam
+- Recognizes Rock, Paper, and Scissors using finger tracking
 - 3-second countdown before each round
-- Score tracking system
-- Reset option
-- Simple UI with OpenCV
+- Score tracking (first to 5 wins)
+- Reset and exit controls
 
 ---
 
@@ -26,22 +25,57 @@ It uses **Computer Vision** to detect your hand and recognize whether you show *
 
 ---
 
+## 📦 Setup
+
+### Requirements
+
+- Python 3.8+
+- A working webcam
+
+### Installation
+
+```bash
+git clone https://github.com/ssgamingop/RockPaperScissorsAR.git
+cd RockPaperScissorsAR
+pip install -r requirements.txt
+```
+
+### Run
+
+```bash
+python main.py
+```
+
+---
+
 ## 🎮 Controls
 
-| Key | Function |
-|----|----|
-| SPACE | Start a new round |
-| R | Reset the game |
-| ESC | Exit the program |
+| Key   | Action              |
+|-------|---------------------|
+| SPACE | Start a new round   |
+| R     | Reset the game      |
+| ESC   | Exit the program    |
+
+---
+
+## 🤚 How It Works
+
+The game uses MediaPipe's hand landmark detection to track 21 points on your hand in real time. It determines which fingers are extended by comparing landmark positions:
+
+- **Rock** → All fingers closed (0-1 fingers up)
+- **Paper** → All fingers open (4-5 fingers up)
+- **Scissors** → Only index and middle fingers extended
+
+The thumb is detected separately using x-axis comparison since it bends sideways unlike the other fingers.
 
 ---
 
 ## 📂 Project Structure
-RockPaperScissorsAI/
 
-│
-├── 
-main.py
+```
+RockPaperScissorsAR/
+├── main.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
